@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <style>
+        .box{
+            width: 500px;
+            height: 600px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            background-image: url(images/Banner_Image.png);
+            background-size: cover;
+            background-position: center;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .box button{
+            width: 145px;
+            height: 33px;
+            background-color: aqua;
+            border: 2px solid rgb(139, 128, 128);
+            border-radius: 8px;
+            font-size: 17px;
+            font-weight: 600;
+            font-family: sans-serif;
+            cursor: pointer;
+            transition: all ease .2s;
+        }
+        .box button:active {
+            transform: scale(.9);
+        }
+        .box .input{
+            width: 400px;
+            height: 25px;
+            border: 2px solid gray;
+            border-radius: 10px;
+            font-size: 17px;
+            font-weight: 600;
+            font-family: sans-serif;
+            padding-left: 20px;
+        }
+        .box .error{
+            color: rgb(231, 50, 50);
+            font-size: 20px;
+            font-weight: 500;
+            font-family: sans-serif;
+        }
+        .box .error i {
+            margin-left: 5px;
+        }
+        .box .result {
+            font-size: 30px;
+            font-weight: 700;
+            font-family: sans-serif;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <p class="error"></p>
+        <input class="input" type="number" placeholder="Give a number">
+        <button class="button">GO</button>
+        <button class="clear">Clear</button>
+        <h1 class="result"></h1>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
