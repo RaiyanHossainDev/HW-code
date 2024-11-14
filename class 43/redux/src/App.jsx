@@ -1,27 +1,31 @@
-import { useDispatch, useSelector } from 'react-redux'
+import { useState } from 'react'
 import './App.css'
+import { useDispatch, useSelector } from 'react-redux'
 import { decrement, increment } from './Slice/counterSlice'
 
 function App() {
-  const number = useSelector((state)=> state.counter.value)
-  const dispatch = useDispatch()
-
-  let handleAdd = ()=>{
-    dispatch(increment())
-  }
-  
-  let handleRemove = () => {
-    dispatch(decrement())
-  }
-  
+  const sliceData = useSelector((state)=> state.counter.value)
+  const dispatch  = useDispatch()
 
 
   return (
     <>
-      <h1>{number}</h1>
-      <div className='flex gap-5'>
-        <button onClick={handleAdd} className='text-2xl bg-green-500 transition-all duration-[.2s] hover:text-[30px] text-white py-[5px] px-[15px] rounded-xl'>Add</button>
-        <button onClick={handleRemove} className='text-2xl bg-red-500 transition-all duration-[.2s] hover:text-[30px] text-white py-[5px] px-[15px] rounded-xl'>Remove</button>
+      <h1 className='text-7xl text-white mb-5'>
+        {sliceData}
+      </h1>
+      <div className='flex gap-7'>
+            <button onClick={()=>dispatch(increment())} className='
+              text-2xl px-[20px] py-[5px] text-white
+            bg-green-500 rounded-xl hover:scale-110 transition-all
+            '>
+              Add
+            </button>
+            <button onClick={(e)=>dispatch(decrement())} className='
+              text-2xl px-[20px] py-[5px] text-white
+            bg-red-500 rounded-xl hover:scale-110 transition-all
+            '>
+              Delete
+            </button>
       </div>
     </>
   )
