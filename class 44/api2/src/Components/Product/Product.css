@@ -1,0 +1,13 @@
+#raiyan_product {
+    @apply pt-[100px]
+}
+
+.single_product_card {
+    @apply w-[203px] flex flex-col gap-5
+}
+.single_product_card .details {
+    @apply flex flex-col gap-2
+}
+.single_product_card .details h2 {
+    @apply font-bold font-ibm
+}

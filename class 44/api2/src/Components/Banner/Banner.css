@@ -1,0 +1,18 @@
+#raiyan_banner {
+    @apply pt-[150px]
+}
+.banner_row {
+    @apply flex justify-between items-center
+}
+.banner_row .banner_text h1 {
+    @apply text-[64px] font-semibold font-ibm
+}
+.banner_row .banner_text p {
+    @apply text-[20px] font-normal font-ibm
+}
+.banner_row .banner_text a {
+    @apply text-white font-ibm font-normal
+    py-[1rem] px-[1.25rem] rounded-[999rem]
+    bg-[#3D50F5] inline-flex items-center gap-2
+    mt-4
+}
